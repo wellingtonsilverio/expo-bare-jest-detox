@@ -25,7 +25,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
-    "@types/jest": "^29.5.12"
+    "@types/jest": "^29.5.12",
+    "@types/react-test-renderer": "^18.0.7"
   },
   "jest": {
     "preset": "jest-expo",
@@ -40,6 +41,6 @@
       "!**/babel.config.js",
       "!**/jest.setup.js"
     ]
-  },  
+  },
   "private": true
 }
