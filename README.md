@@ -1,4 +1,5 @@
-# React Native Expo Bare Template with Jest, Testing Library and Detox
+# React Native Expo Bare Template with Typescript, Jest, Testing Library and Detox
+Project creted with Expo template Bare and configured for unit testing and e2e
 
 ## Run project
 
