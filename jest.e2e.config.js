@@ -1,6 +1,6 @@
 /** @type {import('@jest/types').Config.InitialOptions} */
 module.exports = {
-  rootDir: '..',
+  rootDir: '.',
   testMatch: ['<rootDir>/src/**/*.e2e.js'],
   testTimeout: 120000,
   maxWorkers: 1,
