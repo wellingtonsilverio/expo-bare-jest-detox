@@ -1,3 +1,5 @@
+import { expect } from 'detox';
+
 describe('App E2E', () => {
   beforeAll(async () => {
     await device.launchApp();
