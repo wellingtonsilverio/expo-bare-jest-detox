@@ -9,9 +9,13 @@
     "web": "expo start --web",
     "ts:check": "tsc",
     "test": "jest --watch --coverage=false --changedSince=origin/main",
-    "testDebug": "jest -o --watch --coverage=false",
-    "testFinal": "jest",
-    "updateSnapshots": "jest -u --coverage=false"
+    "test:debug": "jest -o --watch --coverage=false",
+    "test:final": "jest",
+    "test:snapshots": "jest -u --coverage=false",
+    "detox:android:build": "detox build -c android.emu.debug",
+    "detox:android": "detox test -c android.emu.debug",
+    "detox:ios:build": "detox build -c ios.sim.debug",
+    "detox:ios": "detox test -c ios.sim.debug"
   },
   "dependencies": {
     "@types/react": "~18.2.45",
@@ -27,14 +31,17 @@
     "@babel/core": "^7.20.0",
     "@testing-library/react-native": "^12.4.3",
     "@types/jest": "^29.5.12",
-    "@types/react-test-renderer": "^18.0.7"
+    "@types/react-test-renderer": "^18.0.7",
+    "detox": "^20.18.1"
   },
   "jest": {
     "preset": "jest-expo",
     "transformIgnorePatterns": [
       "node_modules/(?!((jest-)?react-native|@react-native(-community)?)|expo(nent)?|@expo(nent)?/.*|@expo-google-fonts/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base|react-native-svg)"
     ],
-    "setupFilesAfterEnv": ["<rootDir>/jest-setup.ts"],
+    "setupFilesAfterEnv": [
+      "<rootDir>/jest-setup.ts"
+    ],
     "collectCoverage": true,
     "collectCoverageFrom": [
       "**/*.{ts,tsx}",
