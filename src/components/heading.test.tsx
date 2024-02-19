@@ -1,4 +1,4 @@
-import renderer from 'react-test-renderer';
+import { render, screen } from '@testing-library/react-native';
 
 import Heading from './heading';
 
@@ -6,8 +6,8 @@ describe("Heading component", () => {
     it("should render Heading with text", () => {
         const text = "Eventos";
 
-        const tree = renderer.create(<Heading>{text}</Heading>).toJSON();
+        render(<Heading>{text}</Heading>);
 
-        expect(tree.children[0]).toBe(text);
+        expect(screen.getByText(text)).toHaveTextContent(text);
     });
 });
